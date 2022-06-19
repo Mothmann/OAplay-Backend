@@ -3,7 +3,7 @@ const Stripe = require('stripe')(process.env.STRIPE_SECRET);
 async function pay(req, res){
 	let { amount, id } = req.body
 	try {
-		const payment = await stripe.paymentIntents.create({
+		const payment = await Stripe.paymentIntents.create({
 			amount,
 			currency: "USD",
 			description: "JumpTech",
