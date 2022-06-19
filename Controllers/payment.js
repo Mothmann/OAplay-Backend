@@ -1,4 +1,4 @@
-const Stripe = require('stripe')(process.env.STRIPE_SECRET);
+const Stripe = require('stripe')("sk_test_51LBlxiIJgwmtmpLuJ42ZY2Td4aTfFW27oczlvzc3nAE4tkgp2i5PRDdrZ4gwGzfPu96YdyN8e3zkbooXKgkIxJQC00AWfFQf1V");
 
 async function pay(req, res){
 	let { amount, id } = req.body
